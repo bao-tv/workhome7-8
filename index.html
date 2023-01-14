@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container text-center mt-5">
+        <div class="w-75">
+            <div class="row p-5 bg-light">
+                <div class="col mt-3" style="color: rgb(100, 84, 84);">
+                    <h3>Bài tập JavaScript Buổi 7-8</h3>
+                </div>
+                <div class="input-group mt-5">
+                    <input type="number" class="form-control" placeholder="Nhập số n" id="num">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" onclick="main()">Thêm số</button>
+                    </div>
+                </div>
+                <div class="p-3 mb-2 bg-success text-white my-3 rounded w-100 text-left" id="result">=> :</div>
+                <div class="bg-white my-5 w-100 text-left">
+                    <!-- 1 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">1. Tổng các số dương</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex1()">Tính tổng</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded m-3" id="resultEx1">=> :</div>
+
+                    <!-- 2 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">2. Đếm số dương</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex2()">Đếm số</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx2">=> :</div>
+
+                    <!-- 3 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">3. Tìm số nhỏ nhất</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex3()">Tìm số nhỏ nhất</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx3">=> :</div>
+
+                    <!-- 4 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">4. Tìm số dương nhỏ nhất</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex4()">Tìm số dương nhỏ nhất</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx4">=> :</div>
+
+                    <!-- 5 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">5. Tìm số chẳn cuối cùng</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex5()">Tìm số chẳn cuối cùng</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx5">=> :</div>
+
+                    <!-- 6 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">6. Đổi chỗ</div>
+                    <div class="d-flex mt-2">
+                        <div class="col-6">
+                            <input type="number" class="form-control" placeholder="Nhập số vị trí 1" id="numA">
+                        </div>
+                        <div class="col-6">
+                            <input type="number" class="form-control" placeholder="Nhập số vị trí 2" id="numB">
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex6()">Đổi chỗ</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx6">=> :</div>
+
+                    <!-- 7 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">7. Sắp xếp tăng dần</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex7()">Sắp xếp</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx7">=> :</div>
+
+                    <!-- 8 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">8. Tìm số nguyên tố đầu tiên</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex8()">Tìm số nguyên tố</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx8">=> :</div>
+
+                    <!-- 9 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">9. Đếm số nguyên</div>
+                    <div class="mt-2">
+                        <div class="mx-5 my-2 d-flex">
+                            <input type="number" class="form-control" placeholder="Nhập số" id="num2">
+                            <button class="btn btn-primary rounded-pill mx-5 w-50" type="button" onclick="ex9A()">Thêm số</button>
+                        </div>
+                        <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx9A">=> :</div>
+                        <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex9B()">Đếm số nguyên</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx9B">=> :</div>
+                    </div>
+
+                    <!-- 10 -->
+                    <div class="p-2 bg-info text-white w-100 text-left">10. So sánh số lượng số âm và số dương</div>
+                    <button class="btn btn-primary rounded-pill my-2 mx-5" type="button" onclick="ex10()">So sánh</button>
+                    <div class="p-2 mb-2 bg-success text-white rounded my-2 mx-5" id="resultEx10">=> :</div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
